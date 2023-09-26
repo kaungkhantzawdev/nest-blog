@@ -14,7 +14,7 @@ import { JwtModule } from '@nestjs/jwt';
     JwtModule.register({
       global: true,
       secret: 'abc',
-      signOptions: { expiresIn: '60s' },
+      signOptions: { expiresIn: '1hr' },
     }),
   ],
   controllers: [AppController],
