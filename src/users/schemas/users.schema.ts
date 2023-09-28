@@ -13,6 +13,12 @@ export class User {
 
   @Prop({ required: true, select: false })
   password: string;
+
+  @Prop({ required: false })
+  facebook: string;
+
+  @Prop({ required: false })
+  google: string;
 }
 
 export const UserSchema = SchemaFactory.createForClass(User);
