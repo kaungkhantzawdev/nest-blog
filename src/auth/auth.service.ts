@@ -43,6 +43,10 @@ export class AuthService {
   async singInService(email: string, password: string) {
     const user = await this.usersService.findByEmail(email);
 
+    if (!user) {
+      throw new BadRequestException('Email or password is invalid.');
+    }
+
     const isMatch = await bcrypt.compare(password, user.password);
 
     if (!isMatch) {
