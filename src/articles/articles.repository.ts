@@ -5,14 +5,13 @@ import { Model } from 'mongoose';
 import { CreateArticleDto } from './dtos/create-article.dto';
 
 @Injectable()
-export class ArticlesService {
+export class ArticlesRepository {
   constructor(
     @InjectModel(Article.name) private articleModel: Model<Article>,
   ) {}
 
   async create(createArticleDto: CreateArticleDto) {
     console.log(createArticleDto);
-    const article = new this.articleModel(createArticleDto);
-    return this.articleModel.create(article);
+    return createArticleDto;
   }
 }
