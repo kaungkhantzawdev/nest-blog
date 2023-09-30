@@ -9,4 +9,9 @@ export default () => ({
     secret: process.env.JWT_SECRET,
     expired: process.env.JWT_EXPIRED,
   },
+  google: {
+    client_id: process.env.GOOGLE_CLIENT_ID,
+    client_secret: process.env.GOOGLE_CLIENT_SECRET,
+    callback_url: process.env.GOOGLE_CALLBACK_URL,
+  },
 });
