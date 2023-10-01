@@ -43,7 +43,8 @@ export class ArticlesController {
   }
 
   @UseInterceptors(
-    FileFieldsInterceptor([
+    FileFieldsInterceptor(
+      [
         { name: 'cover_photo', maxCount: 1 },
         { name: 'detail_photos', maxCount: 5 },
       ],
