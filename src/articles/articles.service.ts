@@ -10,9 +10,8 @@ export class ArticlesService {
     @InjectModel(Article.name) private articleModel: Model<Article>,
   ) {}
 
-  async create(createArticleDto: CreateArticleDto) {
-    console.log(createArticleDto);
-    const article = new this.articleModel(createArticleDto);
+  async create(data) {
+    const article = new this.articleModel(data);
     return this.articleModel.create(article);
   }
 }

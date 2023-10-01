@@ -1,4 +1,4 @@
-import { IsArray, IsString } from 'class-validator';
+import { IsString } from 'class-validator';
 
 export class CreateArticleDto {
   @IsString()
@@ -6,10 +6,4 @@ export class CreateArticleDto {
 
   @IsString()
   description: string;
-
-  @IsString()
-  featuredPhoto: string;
-
-  @IsArray()
-  photos: [];
 }
